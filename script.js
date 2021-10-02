@@ -1,23 +1,36 @@
-const OpenNav = document.querySelector(".icone1")
-const FermerNav = document.querySelector(".fermer")
-const Menu = document.querySelector(".menu")
+const $openNav = document.querySelector(".icone1")
+const $menu = document.querySelector(".menu");
 
-const PositionMenu = Menu.getBoundingClientRect().left;
+$openNav.onclick = (e) => {
+    if ($menu.style.display === "block") {
+        $menu.style.display = "none";
+        $openNav.innerHTML = "<i class='bx bx-menu'></i>";
 
-OpenNav.addEventListener("click",()=>{
-    if(PositionMenu <0){
-        Menu.classList.add("monter")
 
+    } else {
+        $menu.style.display = "block";
+        $openNav.innerHTML = "<i class='bx bx-x'></i>";
     }
-})
+}
 
-FermerNav.addEventListener("click",()=>{
-    if(PositionMenu <0){
-        Menu.classList.remove("monter")
+// const FermerNav = document.querySelector(".fermer")
+// const Menu = document.querySelector(".menu")
 
-    }
+// const PositionMenu = Menu.getBoundingClientRect().left;
 
-})
+// OpenNav.addEventListener("click",()=>{
+//     if(PositionMenu <0){
+//         Menu.classList.add("monter")
 
-console.log("coucou js");
+//     }
+// })
 
+// FermerNav.addEventListener("click",()=>{
+//     if(PositionMenu <0){
+//         Menu.classList.remove("monter")
+
+//     }
+
+// })
+
+// console.log("coucou js");
